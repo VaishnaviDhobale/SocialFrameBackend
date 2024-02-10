@@ -8,7 +8,8 @@ export const signupController = async (req, res, next) => {
     let profile = await uploadOnCloudinaryAndGetPublicUrlOfFiles(req.file.path);
 
     if(!profile.url){
-      res.send(new apiError(500, `Profile photo don't getting upload on coudinatry`));
+      console.log(profile)
+      return res.send(new apiError(500, `Profile photo don't getting upload on coudinatry`));
     } 
 
     const { username, password, name, email, contact } = req.body;
