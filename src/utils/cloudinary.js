@@ -21,7 +21,7 @@ export const uploadOnCloudinaryAndGetPublicUrlOfFiles = async ( localFilePath) =
       resource_type: "auto",
     });
 
-    // fs.unlinkSync(localFilePath); // Here we deleting a file from our local folder once we got public url.
+    fs.unlinkSync(localFilePath); // Here we deleting a file from our local folder once we got public url.
     return response;
   } catch (error) {
     fs.unlinkSync(localFilePath); // Here we deleting a file from our local folder if cloudinary process gets failed.

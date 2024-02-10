@@ -2,4 +2,3 @@ node_modules
 .env
 myNotes.txt
 public
-secVariables.js
