@@ -5,7 +5,7 @@ dotenv.config("./.env")
 
 export const databaseConnection = () => {
     try {
-            let connection = mongoose.createConnection(process.env.MONGO_URL);
+            let connection = mongoose.connect(process.env.MONGO_URL)
             return connection;
     } catch (error) {
             console.log(`Error during database connection!! : ${error}`)

@@ -3,7 +3,6 @@ import dotenv from "dotenv"
 import { databaseConnection } from "./db/databaseConnection.js";
 
 
-
 app.listen(process.env.PORT,()=>{
     try {
         databaseConnection();

@@ -11,3 +11,6 @@ app.use(cookieParser());   // Becouse of this middleware we can set secure cooki
 app.use(express.urlencoded({extended : true})) // Using this middleware we can accept data from URL
 
 // From here Routes getting start 
+import { userRoute } from "./routes/user.routes.js";
+
+app.use("/api/v1/user",userRoute); // this middleware handle user related api's
